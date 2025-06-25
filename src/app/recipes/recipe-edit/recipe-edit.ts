@@ -14,7 +14,7 @@ import { Recipe } from '../recipes.model'; // Importa o modelo de receita
     RouterModule,
     ReactiveFormsModule // IMPORTANTE: Módulo para Reactive Forms
   ],
-  templateUrl: './recipe-edit.html', // Verifique o nome correto do arquivo HTML
+  templateUrl: './recipe-edit.html', // Template HTML para o componente
   styleUrls: ['./recipe-edit.css']
 })
 export class RecipeEditComponent implements OnInit {

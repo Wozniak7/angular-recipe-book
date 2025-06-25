@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #343a40 !important;
+    /* Força a cor primária */
+    box-shadow: var(--shadow-medium);
+    padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.75rem;
+    /* Aumenta o tamanho da fonte */
+    color: var(--card-background) !important;
+    /* Texto branco */
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9) !important;
+    /* Cor mais clara para links */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--card-background) !important;
+}
+
+.nav-link.active {
+    color: var(--card-background) !important;
+    border-bottom: 2px solid var(--card-background);
+    /* Linha sob o link ativo */
+}
+
+/* Estilos para o dropdown */
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-light);
+    border: none;
+}
+
+.dropdown-item {
+    color: #FFFFFF !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(var(--primary-color), 0.1);
+    color: var(--primary-color);
+}

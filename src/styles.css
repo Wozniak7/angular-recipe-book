@@ -1,2 +1,136 @@
-/* You can add global styles to this file, and also import other style files */
-/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+/* Definição de Variáveis CSS para Cores */
+:root {
+    --primary-color: #4CAF50;
+    /* Verde vibrante */
+    --secondary-color: #6c757d;
+    /* Cinza */
+    --accent-color: #FFC107;
+    /* Amarelo/Laranja para destaque ou aviso */
+    --danger-color: #dc3545;
+    /* Vermelho para ações destrutivas */
+    --info-color: #17a2b8;
+    /* Azul claro para informações */
+    --success-color: #28a745;
+    /* Verde para sucesso */
+    --background-light: #F8F9FA;
+    /* Fundo claro */
+    --card-background: #FFFFFF;
+    /* Fundo de cartões */
+    --text-dark: #343a40;
+    /* Texto escuro */
+    --text-muted: #6c757d;
+    /* Texto levemente escuro */
+    --border-color: #dee2e6;
+    /* Cor de borda padrão */
+    --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* Sombra suave */
+    --shadow-medium: 0 6px 15px rgba(0, 0, 0, 0.12);
+    /* Sombra média */
+}
+
+/* Estilos globais para o body e tipografia */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* Ajustes para containers e rows */
+.container {
+    padding: 20px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-md-5,
+.col-md-7 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Estilização para botões Bootstrap que usam as cores CSS vars */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-success:hover {
+    background-color: darken(var(--success-color), 10%);
+    border-color: darken(var(--success-color), 10%);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+    background-color: darken(var(--danger-color), 10%);
+    border-color: darken(var(--danger-color), 10%);
+}
+
+.btn-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+}
+
+.btn-info:hover {
+    background-color: darken(var(--info-color), 10%);
+    border-color: darken(var(--info-color), 10%);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+    border-color: darken(var(--secondary-color), 10%);
+}
+
+.btn-outline-success {
+    color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--success-color);
+    color: var(--card-background);
+}
+
+.btn-outline-danger {
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--danger-color);
+    color: var(--card-background);
+}

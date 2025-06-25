@@ -6,18 +6,9 @@
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <!-- Loop *ngFor para iterar sobre a array de receitas -->
-        <a *ngFor="let recipe of recipes" [routerLink]="['/recipes', recipe.id]" routerLinkActive="active"
-            class="list-group-item list-group-item-action clearfix mb-2" style="cursor: pointer;">
-            <div class="float-start">
-                <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-                <p class="list-group-item-text">{{ recipe.description }}</p>
-            </div>
-            <span class="float-end">
-                <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-fluid rounded"
-                    style="max-height: 80px;">
-            </span>
-        </a>
+        <!-- Loop *ngFor agora renderiza o RecipeItemComponent para cada receita -->
+        <app-recipe-item *ngFor="let recipeEl of recipes; let i = index" [recipe]="recipeEl"
+            [index]="i"></app-recipe-item>
         <p *ngIf="recipes.length === 0" class="text-center text-muted mt-3">Nenhuma receita encontrada. Adicione uma!
         </p>
     </div>

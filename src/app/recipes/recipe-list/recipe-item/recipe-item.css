@@ -1,0 +1,69 @@
+.list-group-item {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem !important;
+    /* Arredondar mais as bordas */
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease;
+    text-decoration: none;
+    /* Remove sublinhado padrão do link */
+    color: var(--text-dark);
+}
+
+.list-group-item:hover {
+    transform: translateY(-5px);
+    /* Efeito de levantar */
+    box-shadow: var(--shadow-medium);
+    /* Sombra mais forte no hover */
+    background-color: rgba(var(--primary-color), 0.03);
+    /* Fundo levemente colorido no hover */
+}
+
+.list-group-item-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    /* Título da receita na cor primária */
+}
+
+.list-group-item-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.list-group-item img {
+    border: 1px solid rgba(var(--primary-color), 0.2);
+    /* Borda sutil na imagem */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 767px) {
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+        text-align: left;
+    }
+
+    .list-group-item img {
+        margin-top: 10px;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 180px !important;
+        object-fit: contain;
+        /* Ajusta como a imagem se encaixa */
+    }
+
+    .truncate-text {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+}

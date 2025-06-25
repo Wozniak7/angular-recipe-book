@@ -1,0 +1,19 @@
+<!-- O routerLink agora navega para a rota de detalhes da receita -->
+<!-- O routerLinkActive="active" adiciona uma classe 'active' ao link quando a rota está ativa -->
+<a [routerLink]="['/recipes', recipe.id]" routerLinkActive="active"
+    class="list-group-item list-group-item-action clearfix mb-2 d-flex justify-content-between align-items-center rounded-3 shadow-sm"
+    style="cursor: pointer;">
+    <div class="flex-grow-1 me-3">
+        <h4 class="list-group-item-heading mb-1 text-primary">{{ recipe.name }}</h4>
+        <p class="list-group-item-text text-muted mb-0 truncate-text">{{ recipe.description }}</p>
+    </div>
+    <span class="flex-shrink-0">
+        <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-fluid rounded"
+            style="max-height: 80px; width: 80px; object-fit: cover;" *ngIf="recipe?.imagePath; else placeholderImage">
+        <!-- Imagem de placeholder caso a imagePath esteja vazia ou inválida -->
+        <ng-template #placeholderImage>
+            <img src="https://placehold.co/80x80/cccccc/333333?text=Sem+Imagem" alt="Sem Imagem"
+                class="img-fluid rounded" style="max-height: 80px; width: 80px; object-fit: cover;">
+        </ng-template>
+    </span>
+</a>

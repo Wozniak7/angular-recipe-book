@@ -1,0 +1,46 @@
+.img-fluid {
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-medium);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+h1.display-5 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: var(--text-dark);
+    font-weight: 600;
+    border-bottom: 2px solid rgba(var(--secondary-color), 0.2);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p.lead {
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.list-group-item {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.list-group-numbered .list-group-item {
+    padding-left: 2.25rem;
+    /* Espaço para o número */
+}
+
+/* Ajustes para botões */
+.btn-group .btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
